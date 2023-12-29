@@ -65,6 +65,7 @@
 	<?php if(isset($_SESSION['connect'])) { ?>
 		<h1>Bonjour !</h1>
 		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+		<small><a href="logout.php">Déconnexion</a></small>
 	<?php } else { ?>
 	
 		<section>
