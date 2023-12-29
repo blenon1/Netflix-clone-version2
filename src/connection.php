@@ -1,6 +1,10 @@
 <?php 
-
-    $bdd = new PDO('mysql:host=localhost;dbname=netflix', 'root', '');
+    try {
+        $bdd = new PDO('mysql:host=localhost;dbname=netflix;charset=utf8', 'root', '');
+        $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch (PDOException $e) {
+        die("La connexion a la base de donnée a échoué : " . $e->getMessage());
+    }
 
 
 ?>
